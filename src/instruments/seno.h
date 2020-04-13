@@ -10,7 +10,7 @@ namespace upc {
   class Seno: public upc::Instrument {
     EnvelopeADSR adsr;
     unsigned int index;
-	float A,f0;
+	float A,f0,pass;
     std::vector<float> tbl;
   public:
     Seno(const std::string &param = "");
