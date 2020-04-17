@@ -1,6 +1,9 @@
 #include <iostream>
 #include "instrument_dumb.h"
 #include "seno.h"
+#include "gen.h"
+#include "perc.h"
+#include "plana.h"
 /*
   For each new instrument:
   - Add the header in this file
@@ -21,6 +24,15 @@ namespace upc {
 
      if (name == "Seno") {
       pInst = (Instrument *) new Seno(parameters);
+    }
+    if (name == "gen"){
+      pInst = (Instrument *) new gen(parameters);
+    }
+    if (name == "perc"){
+      pInst = (Instrument *) new perc(parameters);
+    }
+    if (name == "plana"){
+      pInst = (Instrument *) new plana(parameters);
     }
     return pInst;
   }
