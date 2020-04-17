@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-#include "seno.h"
+#include "sintesis_fm.h"
 #include "keyvalue.h"
 
 #include <stdlib.h>
@@ -8,7 +8,7 @@
 using namespace upc;
 using namespace std;
 
-Seno::Seno(const std::string &param) 
+fm::fm(const std::string &param) 
   : adsr(SamplingRate, param) {
   bActive = false;
   x.resize(BSIZE);
@@ -19,31 +19,32 @@ Seno::Seno(const std::string &param)
   */
   
   KeyValue kv(param);
-  int N;
 
-  if (!kv.to_int("N",N))
-    N = 40; //default value
+  if (!kv.to_float("I",I)) I = 1;
+  if(!kv.to_float("N1",N1)) N1=1;
+  if(!kv.to_float("N2",N2)) N2=1;
   
-  //Create a tbl with one period of a sinusoidal wave
-  tbl.resize(N);
-  float phase = 0, step = 2 * M_PI /(float) N;
-  index = 0;
-  for (int i=0; i < N ; ++i) {
-    tbl[i] = sin(phase);
-    
-    phase += step;
-  }
 }
 
 
-void Seno::command(long cmd, long note, long vel) {
+void fm::command(long cmd, long note, long vel) {
   if (cmd == 9) {		//'Key' pressed: attack begins
     bActive = true;
     adsr.start();
     index = 0;
-    f0=(pow(2,(note-69)/12.))*440;
+    f0=(pow(2,(note-69.0)/12.0))*440;
     pass = (tbl.size()/(double) SamplingRate)*f0 ; 
-  	A = vel / 127.;
+    nota = f0/SamplingRate;
+    step1 = 2*M_PI*nota;
+    step2 = 2*M_PI*(N2/N1)*nota;
+
+  	A = vel / 127.0;
+
+    phase1 = 0; 
+    phase2 = 0;
+
+    cout << vel << endl;
+
   }
   else if (cmd == 8) {	//'Key' released: sustain ends, release begins
     adsr.stop();
@@ -54,7 +55,7 @@ void Seno::command(long cmd, long note, long vel) {
 }
 
 
-const vector<float> & Seno::synthesize() {
+const vector<float> & fm::synthesize() {
   if (not adsr.active()) {
     x.assign(x.size(), 0);
     bActive = false;
@@ -62,17 +63,16 @@ const vector<float> & Seno::synthesize() {
   }
   else if (not bActive)
     return x;
-//FILE *f =fopen("prueba.txt", "w");
-  for (unsigned int i=0; i<x.size(); ++i) {
-    index = index + pass;
-    
-    x[i] = A * tbl[index++];
-   //  fprintf(f, "%f %f %d %f \n", f0, pass, index, x[i]);
 
-    if (index == tbl.size())
-      index = 0;
+  for (unsigned int i=0; i<x.size(); ++i) {
+    x[i] = A *sin(phase1 + I*sin(phase2));
+    phase1 += step1;
+    phase2 += step2;
+    
+    while(phase1>2*M_PI) phase1 -= 2*M_PI;
+    while(phase2>2*M_PI) phase2 -= 2*M_PI;
   }
   adsr(x); //apply envelope to x and update internal status of ADSR
-  //fclose(f);
+  
   return x;
 }

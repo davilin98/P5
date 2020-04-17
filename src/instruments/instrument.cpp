@@ -4,6 +4,7 @@
 #include "gen.h"
 #include "perc.h"
 #include "plana.h"
+#include "sintesis_fm.h"
 /*
   For each new instrument:
   - Add the header in this file
@@ -33,6 +34,9 @@ namespace upc {
     }
     if (name == "plana"){
       pInst = (Instrument *) new plana(parameters);
+    }
+    if (name == "fm"){
+      pInst = (Instrument *) new fm(parameters);
     }
     return pInst;
   }

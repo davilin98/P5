@@ -3,6 +3,7 @@
 sources = [
 	'instruments/instrument.cpp',
 	'instruments/instrument_dumb.cpp',
+	'instruments/sintesis_fm.cpp',
 	'instruments/seno.cpp',
 	'instruments/plana.cpp',
 	'instruments/gen.cpp',
