@@ -22,6 +22,12 @@ namespace upc {
      if (name == "Seno") {
       pInst = (Instrument *) new Seno(parameters);
     }
+    if (name == "gen"){
+      pInst = (Instrument *) new InstrumentDumb(parameters);
+    }
+    if (name == "perc"){
+      pInst = (Instrument *) new InstrumentDumb(parameters);
+    }
     return pInst;
   }
 }
