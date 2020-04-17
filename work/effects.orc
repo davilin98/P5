@@ -1,2 +1,2 @@
-1	Tremolo	fm=6; A=0.10;
-2	Vibrato fm=6; I=1;
+13	Tremolo	fm=6; A=0.10;
+4	Vibrato I=0.45;	fm=6;

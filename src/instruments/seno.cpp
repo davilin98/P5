@@ -67,7 +67,7 @@ FILE *f =fopen("prueba.txt", "w");
     index = index + pass;
     
     x[i] = A * tbl[index++];
-     fprintf(f, "%f %f %d %f \n", f0, pass, index, x[i]);
+   //  fprintf(f, "%f %f %d %f \n", f0, pass, index, x[i]);
 
     if (index == tbl.size())
       index = 0;
