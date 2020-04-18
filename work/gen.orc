@@ -1,1 +1,1 @@
-1	gen	ADSR_A=0.8; ADSR_D=0.3; ADSR_S=0.5; ADSR_R=0.5; N=40;
+1	gen	ADSR_A=0.5; ADSR_D=0.3; ADSR_S=0.2; ADSR_R=0.3; N=40;
