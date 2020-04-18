@@ -41,9 +41,10 @@ void Seno::command(long cmd, long note, long vel) {
     bActive = true;
     adsr.start();
     index = 0;
-    f0=(pow(2,(note-69)/12.))*440;
+    f0=(pow(2,(note-69.0)/12.0))*440;
     pass = (tbl.size()/(double) SamplingRate)*f0 ; 
   	A = vel / 127.;
+    fase = 0;
   }
   else if (cmd == 8) {	//'Key' released: sustain ends, release begins
     adsr.stop();
@@ -64,13 +65,19 @@ const vector<float> & Seno::synthesize() {
     return x;
 //FILE *f =fopen("prueba.txt", "w");
   for (unsigned int i=0; i<x.size(); ++i) {
-    index = index + pass;
+    /*index = index + pass;
     
     x[i] = A * tbl[index++];
    //  fprintf(f, "%f %f %d %f \n", f0, pass, index, x[i]);
 
     if (index == tbl.size())
-      index = 0;
+      index = 0;*/    // Sin interpolación
+ 
+ //Con interpolación
+      fase = fmod(fase + pass,tbl.size());
+    index = floor(fase);
+
+    x[i] = A*(tbl[index]+(tbl[index+1]-tbl[index])*(fase-index));
   }
   adsr(x); //apply envelope to x and update internal status of ADSR
   //fclose(f);
