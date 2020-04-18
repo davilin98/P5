@@ -27,7 +27,7 @@ permitan visualizar el funcionamiento de la curva ADSR.
 
 * Un instrumento con una envolvente ADSR genérica, para el que se aprecie con claridad cada uno de sus
   parámetros: ataque (A), caída (D), mantenimiento (S) y liberación (R).
-  !.[.]. (https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/gen.JPG)
+  ![.] (https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/gen.JPG)
   > Los parametros que hemos usado son: A=0.1, D=0.2, S=0.4 y R=0.2. Primeramente nos gustaría comentar que nos hemos creado un sco que solo tenga 2 notas, para ver mejor los parametros. principalmente se observan a la perfección los parametros nombrados, observando un tiempo de ataque de 0.1, despues baja durante 0.2 se mantiene durante 0.4 y finalmente se acaba bajando 0.2 segundos, aunque no se acaba del todo ya que empiza la siguiente nota.
 * Un instrumento *percusivo*, como una guitarra o un piano, en el que el sonido tenga un ataque rápido, no
   haya mantenimiemto y el sonido se apague lentamente.
@@ -37,7 +37,7 @@ permitan visualizar el funcionamiento de la curva ADSR.
 	  abrupta del sonido hasta su finalización.
   - Debera representar en esta memoria **ambos** posibles finales de la nota.
 * Un instrumento *plano*, como los de cuerdas frotadas (violines y semejantes) o algunos de viento. En
-!.[.]. (https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/plana.JPG)
+![.] (https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/plana.JPG)
 > Aqui observamos que la respuesta es del todo plana, para conseguirlo hemos utilizado un tiempo de ataque muy pequeño (A=0.02), una tiempo de caída nulo (D=0), un sustain grande (S=0.5, hemos usado 0.5 para que se visualizara como se acabava la nota) y un tiempo de liberación muy pequeño (de nuevo R=0.02).
   ellos, el ataque es relativamente rápido hasta alcanzar el nivel de mantenimiento (sin sobrecarga), y la
   liberación también es bastante rápida.
