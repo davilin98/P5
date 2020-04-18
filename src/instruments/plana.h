@@ -10,7 +10,7 @@ namespace upc {
   class plana: public upc::Instrument {
     EnvelopeADSR adsr;
     unsigned int index;
-	float A;
+	float A,f0,pass;
     std::vector<float> tbl;
   public:
     plana(const std::string &param = "");

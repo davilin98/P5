@@ -10,7 +10,7 @@ namespace upc {
   class perc: public upc::Instrument {
     EnvelopeADSR adsr;
     unsigned int index;
-	float A;
+	float A,f0,pass;
     std::vector<float> tbl;
   public:
     perc(const std::string &param = "");

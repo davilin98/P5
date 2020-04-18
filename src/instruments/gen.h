@@ -10,7 +10,7 @@ namespace upc {
   class gen: public upc::Instrument {
     EnvelopeADSR adsr;
     unsigned int index;
-	float A;
+	float A,f0,pass;
     std::vector<float> tbl;
   public:
     gen(const std::string &param = "");
