@@ -76,7 +76,8 @@ mediante búsqueda de los valores en una tabla.
 ![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/vibrato.PNG)
 ![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/vibrato1.PNG)  
  
-> En el vibrato podemos observar que al realizar una fluctuación de la frecuencia, la cual se ve reflectida en el seno en el eje temporal. También podemos observar en el espectrograma que aparecen frecuencias nuevas.  
+> La primera imagen es aplicando vibrato (I = 24; fm = 2000) y la segunda sin vibrato. 
+>En el vibrato podemos observar que al realizar una fluctuación de la frecuencia, la cual se ve reflectida en el seno en el eje temporal. También podemos observar en el espectrograma que aparecen frecuencias nuevas.  
  
 - Si ha generado algún efecto por su cuenta, explique en qué consiste, cómo lo ha implementado y qué
   resultado ha producido. Incluya, en el directorio `work/ejemplos`, los ficheros necesarios para apreciar
