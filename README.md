@@ -68,6 +68,16 @@ mediante búsqueda de los valores en una tabla.
   sinusoidal. Deberá explicar detalladamente cómo se manifiestan los parámetros del efecto (frecuencia e
   índice de modulación) en la señal generada (se valorará que la explicación esté contenida en las propias
   gráficas, sin necesidad de *literatura*).
+  
+  ![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/tremolo.PNG)
+
+> En el tremolo podemos observar una fluctuación de la amplitud en la primera envolvente, mientras que la segunda es la original. 
+
+![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/vibrato.PNG)
+![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/vibrato1.PNG)  
+ 
+> En el vibrato podemos observar que al realizar una fluctuación de la frecuencia, la cual se ve reflectida en el seno en el eje temporal. También podemos observar en el espectrograma que aparecen frecuencias nuevas.  
+ 
 - Si ha generado algún efecto por su cuenta, explique en qué consiste, cómo lo ha implementado y qué
   resultado ha producido. Incluya, en el directorio `work/ejemplos`, los ficheros necesarios para apreciar
   el efecto, e indique, a continuación, la orden necesaria para generar los ficheros de audio usando el
