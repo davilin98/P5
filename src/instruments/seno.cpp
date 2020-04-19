@@ -42,7 +42,7 @@ void Seno::command(long cmd, long note, long vel) {
     adsr.start();
     index = 0;
     f0=(pow(2,(note-69.0)/12.0))*440;
-    pass = (tbl.size()/(double) SamplingRate)*f0 ; 
+    pass = (tbl.size()*f0)/(double) SamplingRate ; 
   	A = vel / 127.;
     fase = 0;
   }
@@ -74,10 +74,17 @@ const vector<float> & Seno::synthesize() {
       index = 0;*/    // Sin interpolación
  
  //Con interpolación
-      fase = fmod(fase + pass,tbl.size());
+     fase = fmod(fase + pass,tbl.size());
     index = floor(fase);
 
     x[i] = A*(tbl[index]+(tbl[index+1]-tbl[index])*(fase-index));
+
+   /* index = index + pass;
+    while(index>=tbl.size()){
+      index=index-tbl.size();
+    }
+      x[i]=A*(((tbl[(int)index]-tbl[((int)index+1)%tbl.size()])*(index-(int)index))+tbl[(int)index]);
+*/
   }
   adsr(x); //apply envelope to x and update internal status of ADSR
   //fclose(f);
