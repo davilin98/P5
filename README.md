@@ -128,7 +128,7 @@ Use el programa `synth` para generar canciones a partir de su partitura MIDI. Co
 - Indique, a continuación, la orden necesaria para generar la señal (suponiendo que todos los archivos
   necesarios están en directorio indicado).
 > Nos colocamos en P5/work
-> synth orchest/toyStory.orc ../samples/ToyStory_A_Friend_in_me.sco music/ToyStory.wav
+ synth orchest/toyStory.orc ../samples/ToyStory_A_Friend_in_me.sco music/ToyStory.wav
 
 También puede orquestar otros temas más complejos, como la banda sonora de *Hawaii5-0* o el villacinco de
 John Lennon *Happy Xmas (War Is Over)* (fichero `The_Christmas_Song_Lennon.sco`), o cualquier otra canción
