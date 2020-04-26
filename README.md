@@ -56,10 +56,6 @@ Implemente el instrumento `Seno` tomando como modelo el `InstrumentDumb`. La se�
 mediante búsqueda de los valores en una tabla.
 
 - Incluya, a continuación, el código del fichero `seno.cpp` con los métodos de la clase Seno.
-  ![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/seno1.JPG)
-  ![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/seno2.JPG)
-  ![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/seno3.JPG)
-
 - Explique qué método se ha seguido para asignar un valor a la señal a partir de los contenidos en la tabla,
   e incluya una gráfica en la que se vean claramente (use pelotitas en lugar de líneas) los valores de la
   tabla y los de la señal generada.
@@ -97,6 +93,21 @@ deberá venir expresado en semitonos.
 
 - Use el instrumento para generar un vibrato de *parámetros razonables* e incluya una gráfica en la que se
   vea, claramente, la correspondencia entre los valores `N1`, `N2` e `I` con la señal obtenida.
+  >Para explicar el efecto de N1,N2 e I, hemos creado 3 señales con distintas N1,N2 e I para así poder ver visualmente los efectos que se produce. 
+  > En primer lugar nos encontramos una gráfica con N1 = 100, N2= 10, I = 10. A partir de la equivalencia que sabemos fc=fm*N1/N2 
+podemos saber que la frecuencia de la portadora será 10 veces mayor a la de la moduladora, también, al tener I = 10, observaremos un gran efecto de modulación. 
+
+![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/fm(N1%3D100%2CN2%3D10%2CI%3D10).PNG)
+ 
+> En este segundo ejemplo, hemos usado los mismos parámetros de N1 y N2, lo que hemos cambiado es la profundidad del vibrato, I=1.
+Se puede observar que el efecto de la moduladora es mucho menor. 
+
+![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/fm(N1%3D100%2CN2%3D10%2CI%3D5).PNG)
+
+> Finalmente, para observar el comportamiento de N1 y N2, hemos creado una señal con N1 = 50 y N2 = 10, esto indica que fc = 5fm por lo tanto, también se puede observar que fc genera 5 ciclos de señal por un ciclo que realiza fm. I = 10. En esta, a diferencia de la primera, se puede observar que produce un efecto distinto cada 5 ciclos de fc.  
+
+![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/fm(N1%3D50%2CN2%3D10%2CI%3D10).PNG)
+
 - Use el instrumento para generar un sonido tipo clarinete y otro tipo campana. Tome los parámetros del
   sonido (N1, N2 e I) y de la envolvente ADSR del citado artículo. Con estos sonidos, genere sendas escalas
   diatónicas (fichero `doremi.sco`) y ponga el resultado en los ficheros `work/doremi/clarinete.wav` y
@@ -116,7 +127,6 @@ Use el programa `synth` para generar canciones a partir de su partitura MIDI. Co
 - Coloque el resultado, junto con los ficheros necesarios para generarlo, en el directorio `work/music`.
 - Indique, a continuación, la orden necesaria para generar la señal (suponiendo que todos los archivos
   necesarios están en directorio indicado).
-  > La orden para generar la señal es; "synth toyStory.orc ToyStory_A_Friend_in_me.sco ToyStory.wav".
 
 También puede orquestar otros temas más complejos, como la banda sonora de *Hawaii5-0* o el villacinco de
 John Lennon *Happy Xmas (War Is Over)* (fichero `The_Christmas_Song_Lennon.sco`), o cualquier otra canción
@@ -125,4 +135,3 @@ de su agrado o composición. Se valorará la riqueza instrumental, su modelado y
   `work/music`.
 - Indique, a continuación, la orden necesaria para generar cada una de las señales usando los distintos
   ficheros.
-  >Hemos generado la orquestación de la canción Debussy de Claire de Lune. La orden para generar la señal es; "synth claire_de_lune.orc claire_de_lune.sco claire_de_lune.wav".
