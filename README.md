@@ -225,10 +225,12 @@ Use el programa `synth` para generar canciones a partir de su partitura MIDI. Co
 - Coloque el resultado, junto con los ficheros necesarios para generarlo, en el directorio `work/music`.
 - Indique, a continuación, la orden necesaria para generar la señal (suponiendo que todos los archivos
   necesarios están en directorio indicado).
-> Nos colocamos en P5/work .
+> Nos colocamos en P5/work en el caso de que queramos ejecutar con cada archivo en carpeta distinta.
 
 > synth orchest/toyStory.orc ../samples/ToyStory_A_Friend_in_me.sco music/ToyStory.wav
 
+> Si preferimos ejecutar con todo en work/music hacemos lo siguiente :.
+> synth toyStory.orc ToyStory_A_Friend_in_me.sco ToyStory.wav
 También puede orquestar otros temas más complejos, como la banda sonora de *Hawaii5-0* o el villacinco de
 John Lennon *Happy Xmas (War Is Over)* (fichero `The_Christmas_Song_Lennon.sco`), o cualquier otra canción
 de su agrado o composición. Se valorará la riqueza instrumental, su modelado y el resultado final.
@@ -239,3 +241,6 @@ de su agrado o composición. Se valorará la riqueza instrumental, su modelado y
 > Hemos realizado la canción Clair de lune del autor, Claude Debussy, es una versión acelerada, es el único .mid que hemos encotrado fácilmente. Hemos pasado el .mid por el programa midi2scores y a partir de ahí hemos creado los 2 instrumentos que nos pedía aunque la canción es únicamente a piano. 
 
 > synth orchest/clair_de_lune.orc ../samples/clair_de_lune.sco music/clair_de_lune.wav
+O en el caso de tener todos los archivos en work/music:
+
+> synth clair_de_lune.orc clair_de_lune.sco clair_de_lune.wav
