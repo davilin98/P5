@@ -148,6 +148,8 @@ const vector<float> & Seno::synthesize() {
 - Explique qué método se ha seguido para asignar un valor a la señal a partir de los contenidos en la tabla,
   e incluya una gráfica en la que se vean claramente (use pelotitas en lugar de líneas) los valores de la
   tabla y los de la señal generada.
+  
+ ![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/seno2.PNG)
 - Si ha implementado la síntesis por tabla almacenada en fichero externo, incluya a continuación el código
   del método `command()`.
 
