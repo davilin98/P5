@@ -149,6 +149,8 @@ const vector<float> & Seno::synthesize() {
   e incluya una gráfica en la que se vean claramente (use pelotitas en lugar de líneas) los valores de la
   tabla y los de la señal generada.
   
+  > Para asignar un valor a partir de la tabla, se ha recorrido a una velocidad definida por la nota que queramos tocar. Al no ser siempre la velocidad multiplo de la frecuencia de la tabla original, nos encontraremos queriendo acceder a indices no enteros de la tabla, por lo que utilizaremos la interpolación para solucionarlo.
+  
  ![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/seno2.PNG)
 - Si ha implementado la síntesis por tabla almacenada en fichero externo, incluya a continuación el código
   del método `command()`.
