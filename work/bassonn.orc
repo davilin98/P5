@@ -1,0 +1,1 @@
+1	fm	ADSR_A=0.1; ADSR_D=0; ADSR_S=0.3; ADSR_R=0.1; N1=500; N2=100; I=1.5;
