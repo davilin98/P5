@@ -231,6 +231,7 @@ Use el programa `synth` para generar canciones a partir de su partitura MIDI. Co
 
 > Si preferimos ejecutar con todo en work/music hacemos lo siguiente :.
 > synth toyStory.orc ToyStory_A_Friend_in_me.sco ToyStory.wav
+
 También puede orquestar otros temas más complejos, como la banda sonora de *Hawaii5-0* o el villacinco de
 John Lennon *Happy Xmas (War Is Over)* (fichero `The_Christmas_Song_Lennon.sco`), o cualquier otra canción
 de su agrado o composición. Se valorará la riqueza instrumental, su modelado y el resultado final.
