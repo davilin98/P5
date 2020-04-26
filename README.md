@@ -56,6 +56,10 @@ Implemente el instrumento `Seno` tomando como modelo el `InstrumentDumb`. La se�
 mediante búsqueda de los valores en una tabla.
 
 - Incluya, a continuación, el código del fichero `seno.cpp` con los métodos de la clase Seno.
+  ![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/seno1.JPG)
+  ![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/seno2.JPG)
+  ![](https://github.com/davilin98/P5/blob/Guardia-Linde/imagenes/seno3.JPG)
+
 - Explique qué método se ha seguido para asignar un valor a la señal a partir de los contenidos en la tabla,
   e incluya una gráfica en la que se vean claramente (use pelotitas en lugar de líneas) los valores de la
   tabla y los de la señal generada.
@@ -112,6 +116,7 @@ Use el programa `synth` para generar canciones a partir de su partitura MIDI. Co
 - Coloque el resultado, junto con los ficheros necesarios para generarlo, en el directorio `work/music`.
 - Indique, a continuación, la orden necesaria para generar la señal (suponiendo que todos los archivos
   necesarios están en directorio indicado).
+  > La orden para generar la señal es; "synth toyStory.orc ToyStory_A_Friend_in_me.sco ToyStory.wav".
 
 También puede orquestar otros temas más complejos, como la banda sonora de *Hawaii5-0* o el villacinco de
 John Lennon *Happy Xmas (War Is Over)* (fichero `The_Christmas_Song_Lennon.sco`), o cualquier otra canción
@@ -120,3 +125,4 @@ de su agrado o composición. Se valorará la riqueza instrumental, su modelado y
   `work/music`.
 - Indique, a continuación, la orden necesaria para generar cada una de las señales usando los distintos
   ficheros.
+  >Hemos generado la orquestación de la canción Debussy de Claire de Lune. La orden para generar la señal es; "synth claire_de_lune.orc claire_de_lune.sco claire_de_lune.wav".
