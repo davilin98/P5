@@ -79,12 +79,7 @@ const vector<float> & Seno::synthesize() {
 
     x[i] = A*(tbl[index]+(tbl[index+1]-tbl[index])*(fase-index));
 
-   /* index = index + pass;
-    while(index>=tbl.size()){
-      index=index-tbl.size();
-    }
-      x[i]=A*(((tbl[(int)index]-tbl[((int)index+1)%tbl.size()])*(index-(int)index))+tbl[(int)index]);
-*/
+  
   }
   adsr(x); //apply envelope to x and update internal status of ADSR
   //fclose(f);
