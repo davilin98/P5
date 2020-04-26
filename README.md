@@ -112,6 +112,10 @@ Se puede observar que el efecto de la moduladora es mucho menor.
   sonido (N1, N2 e I) y de la envolvente ADSR del citado artículo. Con estos sonidos, genere sendas escalas
   diatónicas (fichero `doremi.sco`) y ponga el resultado en los ficheros `work/doremi/clarinete.wav` y
   `work/doremi/campana.work`.
+  
+  > Para crear el clarinete hemos usado estos parámetros : ADSR_A=0.1; ADSR_D=0; ADSR_S=0.3; ADSR_R=0.1; N1=900; N2=600; I=2;
+  > Para crear la campana hemos usado estos parámetros : ADSR_A=0.0001; ADSR_D=0.01; ADSR_S=0.01; ADSR_R=0.05; N1=200; N2=280; I=10;
+  
   * También puede colgar en el directorio work/doremi otras escalas usando sonidos *interesantes*. Por
     ejemplo, violines, pianos, percusiones, espadas láser de la
 	[Guerra de las Galaxias](https://www.starwars.com/), etc.
